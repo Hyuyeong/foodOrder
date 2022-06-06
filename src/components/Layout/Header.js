@@ -7,7 +7,7 @@ const Header = props => {
     <Fragment>
       <header className="header">
         <h1>Hot Dog</h1>
-        <CartButton />
+        <CartButton onClick={props.onShowCart} />
       </header>
 
       {/* <VideoBG /> */}

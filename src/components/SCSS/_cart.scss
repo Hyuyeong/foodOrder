@@ -1,0 +1,77 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+  position: fixed;
+  top: 20vh;
+  left: 5%;
+  width: 90%;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cart__items {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  list-style: none;
+
+  li {
+    display: flex;
+  }
+
+  img {
+    width: 7rem;
+    margin-right: 1rem;
+  }
+}
+
+.cart__total {
+  font-size: 2.2rem;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__action {
+  display: flex;
+  gap: 2rem;
+  justify-content: end;
+}
+
+.modal__content {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}

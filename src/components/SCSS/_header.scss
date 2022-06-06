@@ -16,12 +16,12 @@
 
 .main__image {
   width: 100%;
-  height: 95vh;
+  height: 55vh;
   z-index: 0;
   overflow: hidden;
 
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 100%);
 
   img {
     width: 110%;
@@ -31,7 +31,7 @@
   }
 }
 
-.bg_video {
+.bg__video {
   position: absolute;
   top: 0;
   left: 0;
@@ -46,7 +46,7 @@
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 
-  .content {
+  &__content {
     height: 100%;
     width: 100%;
     object-fit: cover;

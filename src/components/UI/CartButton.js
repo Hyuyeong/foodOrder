@@ -2,7 +2,7 @@ import CartIcon from './CartIcon';
 
 const CartButton = props => {
   return (
-    <div className="btn__cart">
+    <div onClick={props.onClick} className="btn__cart">
       <span>
         <CartIcon />
       </span>
