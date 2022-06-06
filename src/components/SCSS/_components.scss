@@ -1,0 +1,64 @@
+.icon__cart {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+}
+
+.btn__cart {
+  display: flex;
+
+  gap: 1rem;
+  align-items: center;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 3rem;
+  background-color: $color-secondary;
+
+  border-radius: 100px;
+
+  cursor: pointer;
+
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: rgba($color-secondary, 0.85);
+    transform: translateY(-0.2rem);
+  }
+
+  .badge {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $color-grey-light-1;
+    color: orangered;
+    margin-left: 1rem;
+    font-weight: 700;
+
+    // margin: 1rem;
+    text-align: center;
+    border-radius: 50%;
+  }
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  font-size: 1.6rem;
+
+  label {
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+
+  input {
+    width: 5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font: inherit;
+    // padding-left: 0.5rem;
+    text-align: center;
+    // padding-right: 0.5rem;
+  }
+}
