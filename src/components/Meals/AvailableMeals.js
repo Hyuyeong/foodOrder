@@ -1,5 +1,4 @@
-import { Fragment } from 'react';
-import MealForm from './MealForm';
+import MealItem from './MealItem';
 
 const DUMMY_MEALS = [
   {
@@ -90,50 +89,21 @@ const DUMMY_MEALS = [
 ];
 
 const AvailableMeals = props => {
-  const data = DUMMY_MEALS.map(data => {
-    return (
-      <Fragment>
-        <li className="meal">
-          <div className="meal__detail">
-            <img src={data.img} alt={data.name} />
-            <div>
-              <h3>{data.name}</h3>
-              <div className="description">{data.description}</div>
-              <div className="price">$ {data.price.toFixed(1)}</div>
-            </div>
-          </div>
-          <MealForm />
-        </li>
-      </Fragment>
-    );
-  });
+  const mealList = DUMMY_MEALS.map(meal => (
+    <MealItem
+      key={meal.id}
+      id={meal.id}
+      name={meal.name}
+      description={meal.description}
+      price={meal.price}
+      img={meal.img}
+    />
+  ));
 
   return (
-    <div>
-      {/* <div className="meal__detail">
-        <img
-          src="https://d2vwsr3mua7yp8.cloudfront.net/78ae7879-0e8e-4594-9fbc-1040fce8d6f2_d3.jpg"
-          alt=""
-        />
-        <div>
-          <h3>choco peanut</h3>
-          <div className="description">snickers chocolate</div>
-          <div className="price">$ 6</div>
-        </div>
-      </div>
-      <div className="meal__detail">
-        <img
-          src="https://d2vwsr3mua7yp8.cloudfront.net/78ae7879-0e8e-4594-9fbc-1040fce8d6f2_d3.jpg"
-          alt=""
-        />
-        <div>
-          <h3>choco peanut</h3>
-          <div className="description">snickers chocolate</div>
-          <div className="price">$ 6</div>
-        </div>
-      </div> */}
-      {data}
-    </div>
+    <section>
+      <ul>{mealList}</ul>
+    </section>
   );
 };
 export default AvailableMeals;

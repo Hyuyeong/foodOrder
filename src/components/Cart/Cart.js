@@ -1,17 +1,17 @@
 import Modal from '../UI/Modal';
+import { useContext } from 'react';
+import CartContext from '../../store/cart-context';
 
 const Cart = props => {
+  const cartCtx = useContext(CartContext);
+
+  console.log(cartCtx);
+
+  const totalAmount = `$${cartCtx.totalAmount.toFixed(1)}`;
+
   const cartitems = (
     <ul className="cart__items">
-      {[
-        {
-          id: 'm1',
-          name: 'sushi',
-          amount: 2,
-          price: 12.99,
-          img: 'https://d2vwsr3mua7yp8.cloudfront.net/78ae7879-0e8e-4594-9fbc-1040fce8d6f2_d3.jpg',
-        },
-      ].map(item => (
+      {cartCtx.items.map(item => (
         <li>
           <img src={item.img} alt="" />
           {item.name}
@@ -25,7 +25,7 @@ const Cart = props => {
       {cartitems}
       <div className="cart__total">
         <span>Total Amount</span>
-        <span>35.62</span>
+        <span>{totalAmount}</span>
       </div>
       <div className="cart__action">
         <button onClick={props.onHideCart} className="btn__close">
