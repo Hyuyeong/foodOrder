@@ -1,4 +1,4 @@
-import Input from '../UI/input';
+import Input from '../UI/Input';
 import { useRef, useState } from 'react';
 
 const MealForm = props => {
