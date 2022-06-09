@@ -105,3 +105,15 @@
     transform: scale(1);
   }
 }
+
+.loading,
+.error {
+  font-size: 2rem;
+  display: grid;
+  place-content: center;
+  font-weight: 800;
+}
+
+.error {
+  color: orangered;
+}
