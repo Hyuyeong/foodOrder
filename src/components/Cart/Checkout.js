@@ -55,19 +55,19 @@ const Checkout = props => {
     });
   };
   return (
-    <form onSubmit={submitHandler}>
+    <form className="checkout__form" onSubmit={submitHandler}>
       <div className="checkout__control">
         <label htmlFor="name">Name</label>
         <input ref={inputNameRef} type="text" id="name" />
         {!formInputValidity.name && (
-          <p className="checkout__control__message">Please fill out the form</p>
+          <p className="checkout__control__message">Please enter the name</p>
         )}
       </div>
       <div className="checkout__control">
         <label htmlFor="street">Street</label>
         <input ref={inputStreetRef} type="text" id="street" />
         {!formInputValidity.street && (
-          <p className="checkout__control__message">Please fill out the form</p>
+          <p className="checkout__control__message">Please enter the street</p>
         )}
       </div>
       <div className="checkout__control">
@@ -81,7 +81,7 @@ const Checkout = props => {
         <label htmlFor="city">City</label>
         <input ref={inputCityRef} type="text" id="city" />
         {!formInputValidity.city && (
-          <p className="checkout__control__message">Please fill out the form</p>
+          <p className="checkout__control__message">Please enter the city</p>
         )}
       </div>
 

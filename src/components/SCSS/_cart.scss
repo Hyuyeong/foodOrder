@@ -12,7 +12,7 @@
 .modal {
   position: fixed;
 
-  top: 20vh;
+  top: 10vh;
   left: 25%;
   width: 50vw;
 
@@ -66,6 +66,7 @@
   img {
     width: 7rem;
     margin-right: 1rem;
+    filter: blur(3px);
   }
 }
 
@@ -114,5 +115,49 @@
     }
 
     // padding: 1rem 2rem;
+  }
+}
+
+.checkout__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  .checkout__control {
+    gap: 0.5rem;
+    display: grid;
+    justify-content: start;
+
+    &__message {
+      color: $color-primary;
+    }
+  }
+
+  .checkout__button {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    button {
+      padding: 1rem 2rem;
+
+      border-radius: 100px;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+        color: #000;
+      }
+    }
+
+    &-cancel {
+      background-color: orangered;
+      margin-left: auto;
+    }
+    &-confirm {
+      background-color: $color-primary;
+    }
   }
 }

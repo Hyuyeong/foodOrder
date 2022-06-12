@@ -18,7 +18,10 @@ const MealItem = props => {
   return (
     <li className="meal">
       <div className="meal__detail">
-        <img src={props.img} alt={props.name} />
+        <div>
+          <img src={props.img} alt={props.name} />
+          {/* <span className="copyright">copyright</span> */}
+        </div>
         <div>
           <h3>{props.name}</h3>
           <div className="description">{props.description}</div>
