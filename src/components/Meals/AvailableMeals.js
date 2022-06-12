@@ -114,7 +114,7 @@ const AvailableMeals = props => {
       setIsLoading(false);
       setHttpError(error.message);
     });
-  }, [getData]);
+  }, []);
 
   if (isLoading) {
     return <p className="loading">Loading...</p>;
